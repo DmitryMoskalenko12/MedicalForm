@@ -1,0 +1,52 @@
+.navigation{
+  position: relative;
+  height: 65px;
+  padding-left: 165px;
+  padding-right: 160px;
+  border-bottom: 1px solid #EAEAEA;
+  &__list{
+    position: absolute;
+    min-width: 850px;
+    height: 17px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0px;
+    margin-bottom: 0px;
+    li{
+     a{
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #111111;
+      text-decoration: none;
+     } 
+    }
+  }
+  &__dress{
+    width: 97px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #111111;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  &__shous{
+    width: 77px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #111111;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    
+  }
+
+}
