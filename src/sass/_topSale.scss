@@ -1,0 +1,132 @@
+.topsale{
+  position: relative;
+  min-height: 472px;
+  padding-top: 33px;
+  padding-bottom: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  &__arrow-left{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #C4C4C4;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 33px;
+    cursor: pointer;
+  }
+  &__arrow-right{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #C4C4C4;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 33px;
+    cursor: pointer;
+  }
+  &__top-slidewrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    min-height: 472px;
+    margin-top: 33px;
+    
+  }
+  &__card{
+    min-height: 472px;
+    width: 270px;
+  }
+  &__top-imgwrapper{
+    position: relative;
+    width: 270px;
+    height: 405px;
+    >img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__hitsale{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 90px;
+    height: 23px;
+    padding-top: 2px;
+    background: rgba(244, 244, 244, 0.9);
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #44424B;
+  }
+  &__new{
+    position: absolute;
+    width: 71px;
+    height: 23px;
+    background: #333152;
+    top: 38px;
+    left: 8px;
+    padding-top: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &__descr{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #44424B;
+    margin-top: 19px;
+  }
+  &__price{
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #333152;
+    margin-top: 12px;
+  }
+  &__lowprice{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 49px;
+    height: 23px;
+    background: #EA4953;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 2px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &__pricewrapper{
+    width: 143px;
+    height: 19px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  &__redprice{
+    margin-top: 0;
+  }
+  &__pastprice{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    text-decoration-line: line-through;
+    color: #88888F;
+  }
+}
