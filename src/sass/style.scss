@@ -5,7 +5,9 @@
 }
 .container{
   width: 1170px;
+  margin: 0 auto;
 }
 
 @import 'header';
 @import 'nav';
+@import 'bigSlider';
