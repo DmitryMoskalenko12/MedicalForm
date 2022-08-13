@@ -138,6 +138,7 @@ const field = document.querySelector('.topsale__field'),
       topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
       prevar = document.querySelector('.topsale__arrow-left'),
       nextar = document.querySelector('.topsale__arrow-right');
+      
  class Card {
   constructor(src, alt, content, newcontent, lowprice, descr, price, pastprice){
     this.src = src,
