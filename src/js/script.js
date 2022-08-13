@@ -129,7 +129,35 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
          cursor: pointer;`
         })
         })
-      
+/* второй слайдер   */ 
+   const wrapp = document.querySelector('.topsale__mainwrapper'),
+         field = document.querySelector('.topsale__field'),
+         width2 = window.getComputedStyle(wrapp).width,
+         contentWrapper = document.querySelectorAll('.topsale__top-slidewrapper'),
+         prevar = document.querySelector('.topsale__arrow-left'),
+         nextar = document.querySelector('.topsale__arrow-right');
+         
+         let offset2 = 2340;
+
+         field.style.width = 100 * contentWrapper.length + "%";
+
+         nextar.addEventListener('click', ()=>{
+          if (offset2 == +width2.replace(/\D/ig, '') * (contentWrapper.length )){
+            offset2 = 0
+          }else{
+            offset2 += +width2.replace(/\D/ig, '')
+          } 
+          field.style.transform = `translateX(-${offset2}px)`
+         })
+         
+         prevar.addEventListener('click', ()=>{
+          if (offset2 == 0){
+            offset2 = +width2.replace(/\D/ig, '') * (contentWrapper.length )
+          }else{
+            offset2 -= +width2.replace(/\D/ig, '')
+          } 
+          field.style.transform = `translateX(-${offset2}px)`
+         })  
 
 
 

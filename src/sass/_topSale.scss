@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-between;
     width: 1170px;
-    min-height: 472px;
+    /* height: 472px; */
     margin-top: 33px;
     
   }
@@ -128,5 +128,13 @@
     text-align: center;
     text-decoration-line: line-through;
     color: #88888F;
+  }
+  &__field{
+    display: flex;
+    transition: '2s';
+  }
+  &__mainwrapper{
+    width: 1170px;
+    overflow: hidden; 
   }
 }
