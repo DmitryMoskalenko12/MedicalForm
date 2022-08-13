@@ -36,15 +36,17 @@
   }
   &__top-slidewrapper{
     display: flex;
-    justify-content: space-between;
-    width: 1170px;
+   /*  justify-content: space-between; */
+    /* width: 1170px; */
     /* height: 472px; */
+    transition: 2s;
     margin-top: 33px;
     
   }
   &__card{
     min-height: 472px;
     width: 270px;
+    margin-right: 30px;
   }
   &__top-imgwrapper{
     position: relative;
@@ -130,11 +132,8 @@
     color: #88888F;
   }
   &__field{
-    display: flex;
-    transition: '2s';
-  }
-  &__mainwrapper{
     width: 1170px;
-    overflow: hidden; 
+    overflow: hidden;
   }
+
 }

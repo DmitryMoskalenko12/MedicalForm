@@ -130,34 +130,34 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
         })
         })
 /* второй слайдер   */ 
-   const wrapp = document.querySelector('.topsale__mainwrapper'),
-         field = document.querySelector('.topsale__field'),
-         width2 = window.getComputedStyle(wrapp).width,
-         contentWrapper = document.querySelectorAll('.topsale__top-slidewrapper'),
+   const field = document.querySelector('.topsale__field'),
+         contentWrapper = document.querySelectorAll('.topsale__card'),
+         width2 = window.getComputedStyle(contentWrapper[0]).width,
+         topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
          prevar = document.querySelector('.topsale__arrow-left'),
          nextar = document.querySelector('.topsale__arrow-right');
-         
-         let offset2 = 2340;
+  
+  let offset2 = 0;
 
-         field.style.width = 100 * contentWrapper.length + "%";
+  topSaleWrapper.style.width = (100 * (contentWrapper.length - 4)) + "%";
 
-         nextar.addEventListener('click', ()=>{
-          if (offset2 == +width2.replace(/\D/ig, '') * (contentWrapper.length )){
-            offset2 = 0
-          }else{
-            offset2 += +width2.replace(/\D/ig, '')
-          } 
-          field.style.transform = `translateX(-${offset2}px)`
-         })
-         
-         prevar.addEventListener('click', ()=>{
-          if (offset2 == 0){
-            offset2 = +width2.replace(/\D/ig, '') * (contentWrapper.length )
-          }else{
-            offset2 -= +width2.replace(/\D/ig, '')
-          } 
-          field.style.transform = `translateX(-${offset2}px)`
-         })  
+  nextar.addEventListener('click', ()=>{
+  if (offset2 == (+width2.replace(/\D/ig, '') + 30) * (contentWrapper.length - 4)){
+    offset2 = 0
+  }else{
+    offset2 += (+width2.replace(/\D/ig, '') + 30)
+  } 
+  topSaleWrapper.style.transform = `translateX(-${offset2}px)`
+  })
+  
+  prevar.addEventListener('click', ()=>{
+  if (offset2 == 0){
+    offset2 = (+width2.replace(/\D/ig, '') + 30) * (contentWrapper.length - 4)
+  }else{
+    offset2 -= (+width2.replace(/\D/ig, '') + 30)
+  } 
+  topSaleWrapper.style.transform = `translateX(-${offset2}px)`
+  })  
 
 
 
