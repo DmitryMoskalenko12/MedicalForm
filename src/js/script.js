@@ -138,7 +138,7 @@ const field = document.querySelector('.topsale__field'),
       topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
       prevar = document.querySelector('.topsale__arrow-left'),
       nextar = document.querySelector('.topsale__arrow-right');
-      
+
  class Card {
   constructor(src, alt, content, newcontent, lowprice, descr, price, pastprice){
     this.src = src,
@@ -223,3 +223,34 @@ new Card(src, alt, content, newcontent, lowprice, descr, pastprice, price).rende
   topSaleWrapper.style.transform = `translateX(-${offset2}px)`
   })  
 
+/* слайдер новых товаров */
+
+const fieldProd = document.querySelector('.newproduct__field'),
+      contentWrapperProd = document.querySelectorAll('.newproduct__card'),
+      widthProd = window.getComputedStyle(contentWrapperProd[0]).width,
+      topSaleWrapperProd = document.querySelector('.newproduct__top-slidewrapper'),
+      prevProd = document.querySelector('.newproduct__arrow-left'),
+      nextProd = document.querySelector('.newproduct__arrow-right');
+      let offsetProd = 0;
+
+      topSaleWrapperProd.style.width = (100 * (contentWrapperProd.length - 4)) + "%";
+    
+      nextProd.addEventListener('click', ()=>{  
+
+      if (offsetProd == (+widthProd.replace(/\D/ig, '') + 30) * (contentWrapperProd.length - 4)){
+        offsetProd = 0
+      }else{
+        offsetProd += (+widthProd.replace(/\D/ig, '') + 30)
+      } 
+      topSaleWrapperProd.style.transform = `translateX(-${offsetProd}px)`
+      })
+      
+      prevProd.addEventListener('click', ()=>{
+            
+      if (offsetProd == 0){
+        offsetProd = (+widthProd.replace(/\D/ig, '') + 30) * (contentWrapperProd.length - 4)
+      }else{
+        offsetProd -= (+widthProd.replace(/\D/ig, '') + 30)
+      } 
+      topSaleWrapperProd.style.transform = `translateX(-${offsetProd}px)`
+      })         
