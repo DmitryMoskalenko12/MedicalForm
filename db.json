@@ -1,0 +1,79 @@
+{
+  "slideInfo":[
+    {
+      "src": "img/costume1.png",
+      "alt": "costume1",
+      "content": "Хит продаж",
+      "newcontent": "<div class='topsale__new'>Новинка</div>",
+      "descr": "Женский медицинский костюм",
+      "price": "900 грн"
+
+    },
+    {
+      "src": "img/costume2.png",
+      "alt": "costume2",
+      "content": "Хит продаж",
+      "descr": "Женский медицинский халат",
+      "price": "800 грн"
+
+    },
+    {
+      "src": "img/costume3.png",
+      "alt": "costume3",
+      "content": "Хит продаж",
+      "newcontent": "<div class='topsale__new'>Новинка</div>",
+      "lowprice": "<div class='topsale__lowprice'>-15%</div>",
+      "descr": "Женский медицинский костюм",
+      "price": "900 грн",
+      "pastprice": "<div class='topsale__pastprice'>1000 грн</div>"
+      
+
+    },
+    {
+      "src": "img/costume4.png",
+      "alt": "costume4",
+      "content": "Хит продаж",
+      "descr": "Кроксы женские",
+      "price": "800 грн"
+
+    },
+    {
+      "src": "img/costume1.png",
+      "alt": "costume1",
+      "content": "Хит продаж",
+      "newcontent": "<div class='topsale__new'>Новинка</div>",
+      "descr": "Женский медицинский костюм",
+      "price": "900 грн"
+
+    },
+    {
+      "src": "img/costume2.png",
+      "alt": "costume2",
+      "content": "Хит продаж",
+      "descr": "Женский медицинский халат",
+      "price": "800 грн"
+
+    },
+    {
+      "src": "img/costume3.png",
+      "alt": "costume3",
+      "content": "Хит продаж",
+      "newcontent": "<div class='topsale__new'>Новинка</div>",
+      "lowprice": "<div class='topsale__lowprice'>-15%</div>",
+      "descr": "Женский медицинский костюм",
+      "pastprice": "<div class='topsale__pastprice'>1000 грн</div>",
+      "price": "900 грн"
+
+    },
+    {
+      "src": "img/costume4.png",
+      "alt": "costume4",
+      "content": "Хит продаж",
+      "descr": "Кроксы женские",
+      "price": "800 грн"
+
+    }
+
+
+  ]
+}

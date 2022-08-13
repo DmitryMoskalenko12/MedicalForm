@@ -36,9 +36,6 @@
   }
   &__top-slidewrapper{
     display: flex;
-   /*  justify-content: space-between; */
-    /* width: 1170px; */
-    /* height: 472px; */
     transition: 2s;
     margin-top: 33px;
     
@@ -117,12 +114,13 @@
     height: 19px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 12px;
   }
   &__redprice{
     margin-top: 0;
+    color: #EA4953;
   }
   &__pastprice{
     font-weight: 400;
@@ -130,6 +128,7 @@
     text-align: center;
     text-decoration-line: line-through;
     color: #88888F;
+    margin-right: 10px;
   }
   &__field{
     width: 1170px;

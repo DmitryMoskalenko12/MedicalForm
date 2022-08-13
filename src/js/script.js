@@ -129,19 +129,79 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
          cursor: pointer;`
         })
         })
+
+/*  создание фото в слайдере */
+
+const field = document.querySelector('.topsale__field'),
+      contentWrapper = document.querySelectorAll('.topsale__card'), 
+     /*  width2 = window.getComputedStyle(contentWrapper[0]).width, */ 
+      topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
+      prevar = document.querySelector('.topsale__arrow-left'),
+      nextar = document.querySelector('.topsale__arrow-right');
+ class Card {
+  constructor(src, alt, content, newcontent, lowprice, descr, price, pastprice){
+    this.src = src,
+    this.alt = alt,
+    this.content = content,
+    this.newcontent = newcontent,
+    this.lowprice = lowprice,
+    this.descr = descr,
+    this.price = price,
+    this.pastprice = pastprice
+  }
+
+  render(){
+    const div = document.createElement('div')
+    div.innerHTML=`
+    <div class="topsale__card">
+      <div class="topsale__top-imgwrapper">
+        <img src=${this.src} alt=${this.alt}>
+        <div class="topsale__hitsale">${typeof(this.content) === 'undefined' ? '' : this.content}</div>
+        ${typeof(this.newcontent) === 'undefined' ? '': this.newcontent}
+        ${typeof(this.lowprice) === 'undefined' ? '' : this.lowprice}
+      </div>
+      <div class="topsale__descr">${this.descr}</div>
+      <div class="topsale__pricewrapper">
+        <div class="topsale__price topsale__redprice ">${typeof(this.price) === 'undefined' ? '' : this.price}</div>
+        ${typeof(this.pastprice) === 'undefined' ? '' : this.pastprice}
+      </div>
+     </div>`
+     
+     topSaleWrapper.append(div)
+  }
+}
+async function getInfo(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`Error in path ${url} status ${res.status}`)
+  }else{
+    return await res.json()
+  }
+  
+}
+
+getInfo('http://localhost:3000/slideInfo')
+.then((data)=>{
+data.forEach(({src, alt, content, newcontent, lowprice, descr, pastprice, price})=>{
+new Card(src, alt, content, newcontent, lowprice, descr, pastprice, price).render()
+})
+})       
 /* второй слайдер   */ 
-   const field = document.querySelector('.topsale__field'),
+   /* const field = document.querySelector('.topsale__field'),
          contentWrapper = document.querySelectorAll('.topsale__card'),
          width2 = window.getComputedStyle(contentWrapper[0]).width,
          topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
          prevar = document.querySelector('.topsale__arrow-left'),
-         nextar = document.querySelector('.topsale__arrow-right');
+         nextar = document.querySelector('.topsale__arrow-right'); */
   
   let offset2 = 0;
 
   topSaleWrapper.style.width = (100 * (contentWrapper.length - 4)) + "%";
 
   nextar.addEventListener('click', ()=>{
+   const contentWrapper = document.querySelectorAll('.topsale__card'),
+         width2 = window.getComputedStyle(contentWrapper[0]).width;
+         
   if (offset2 == (+width2.replace(/\D/ig, '') + 30) * (contentWrapper.length - 4)){
     offset2 = 0
   }else{
@@ -151,6 +211,9 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
   })
   
   prevar.addEventListener('click', ()=>{
+   const contentWrapper = document.querySelectorAll('.topsale__card'),
+         width2 = window.getComputedStyle(contentWrapper[0]).width;
+         
   if (offset2 == 0){
     offset2 = (+width2.replace(/\D/ig, '') + 30) * (contentWrapper.length - 4)
   }else{
@@ -158,6 +221,4 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
   } 
   topSaleWrapper.style.transform = `translateX(-${offset2}px)`
   })  
-
-
 
