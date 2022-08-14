@@ -12,8 +12,8 @@
   <header class="head">
     <div class="head__block1">
       <select name="lang" class="head__select">
-        <option>Укр</option>
-        <option>Eng</option>
+        <option value="ua">Укр</option>
+        <option value="eng">Eng</option>
       </select>
 
       <div class="head__wrap-geol">
@@ -58,11 +58,11 @@
     <div class="container">
       <ul class="navigation__list">
         <li><select class="navigation__dress" name="dress">
-          <option>Костюми</option>
-          <option> Медичні костюми</option>
-          <option> Жіночі костюми</option>
-          <option> Чоловічі костюми</option>
-          <option> Операційні костюми</option>
+          <option value="costume">Костюми</option>
+          <option value="medical"> Медичні костюми</option>
+          <option value="female"> Жіночі костюми</option>
+          <option  value="man">Чоловічі костюми</option>
+          <option value="operation"> Операційні костюми</option>
         </select> </li>
         <li><a href="#">Халати</a></li>
         <li><a href="#">Топи</a></li>
@@ -70,9 +70,9 @@
         <li><a href="#">Товстовки</a></li>
         <li><a href="#">Шапочки</a></li>
         <li><select class="navigation__shous" name="shous">
-          <option>Взуття</option>
-          <option>Чоловіче взуття</option>
-          <option>Жіноче взуття</option>
+          <option value="shoes">Взуття</option>
+          <option value="man shoes">Чоловіче взуття</option>
+          <option value="female shoes">Жіноче взуття</option>
         </select></li>
         <li><a href="#">Акції</a></li>
       </ul>
@@ -407,7 +407,74 @@
   </div>
 </section>
 
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__social-logo">
+        <div class="footer__logo">
+          <img src="img/logofooter.png" alt="logo">
+        </div>
 
+        <div class="footer__social">
+          <a href="#">
+            <img src="icons/faceb.png" alt="faceb">
+          </a>
+
+          <a href="#">
+            <img src="icons/insta.png" alt="insta">
+          </a>
+        </div>
+      </div>
+
+
+<div class="footer__catalog">
+  <ul class="footer__list">
+   <li class="footer__bold">Каталог</li>
+   <li class="footer__item"><a href="#">Костюмы</a></li>
+   <li class="footer__item"><a href="#">Халаты</a></li>
+   <li class="footer__item"><a href="#">Топы</a></li>
+   <li class="footer__item"><a href="#">Брюки</a></li>
+   <li class="footer__item"><a href="#">Толстовки</a></li>
+   <li class="footer__item"><a href="#">Шапочки</a></li>
+   <li class="footer__item"><a href="#">Обувь</a></li>
+  </ul>
+</div>
+
+<div class="footer__information">
+  <ul class="footer__list-info">
+   <li class="footer__bold-info">Информация</li>
+   <li class="footer__item-info"><a href="#">Доставка и оплата</a></li>
+   <li class="footer__item-info"><a href="#">Гарантия и возврат</a></li>
+   <li class="footer__item-info"><a href="#">Корпоративным клиентам</a></li>
+   <li class="footer__item-info"><a href="#">О нас</a></li>
+   <li class="footer__item-info"><a href="#">Контакты</a></li>
+   <li class="footer__item-info"><a href="#">Политика конфиденциальности</a></li>
+   <li class="footer__item-info"><a href="#">Договор оферты</a></li>
+  </ul>
+</div>
+
+<div class="footer__adress">
+  <div class="footer__title">Контакты</div>
+  <div class="footer__street">ТЦ "Променада Центр",<br> вулиця Овруцька, 18</div>
+  <div class="footer__time">Ежедневно с 10:00 до 20:00</div>
+  <div class="footer__tel">+38 (067) 198-33-77</div>
+  <div class="footer__social-item">
+    <a href="#">
+      <img src="icons/viber.png" alt="viber">
+    </a>
+
+    <a href="#">
+      <img src="icons/telegram.png" alt="telegram">
+    </a>
+
+    <a href="#">
+      <img src="icons/whatsup.png" alt="whatsup">
+    </a>
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
   <script src="js/script.js"></script>
 </body>
 </html>

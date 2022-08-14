@@ -1,4 +1,4 @@
-
+window.addEventListener('DOMContentLoaded',()=>{
 /* большой слайдер */
 const back = document.querySelector('.main-slider__arrow-wrapperleft'),
       next = document.querySelector('.main-slider__arrow-wrapperright'),
@@ -133,8 +133,7 @@ const back = document.querySelector('.main-slider__arrow-wrapperleft'),
 /*  создание фото в слайдере */
 
 const field = document.querySelector('.topsale__field'),
-      contentWrapper = document.querySelectorAll('.topsale__card'), 
-     /*  width2 = window.getComputedStyle(contentWrapper[0]).width, */ 
+      contentWrapper = document.querySelectorAll('.topsale__card'),  
       topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
       prevar = document.querySelector('.topsale__arrow-left'),
       nextar = document.querySelector('.topsale__arrow-right');
@@ -188,13 +187,7 @@ new Card(src, alt, content, newcontent, lowprice, descr, pastprice, price).rende
 })
 })       
 /* второй слайдер   */ 
-   /* const field = document.querySelector('.topsale__field'),
-         contentWrapper = document.querySelectorAll('.topsale__card'),
-         width2 = window.getComputedStyle(contentWrapper[0]).width,
-         topSaleWrapper = document.querySelector('.topsale__top-slidewrapper'),
-         prevar = document.querySelector('.topsale__arrow-left'),
-         nextar = document.querySelector('.topsale__arrow-right'); */
-  
+ 
   let offset2 = 0;
 
   topSaleWrapper.style.width = (100 * (contentWrapper.length - 4)) + "%";
@@ -253,4 +246,8 @@ const fieldProd = document.querySelector('.newproduct__field'),
         offsetProd -= (+widthProd.replace(/\D/ig, '') + 30)
       } 
       topSaleWrapperProd.style.transform = `translateX(-${offsetProd}px)`
-      })         
+      }) 
+         
+     
+})
+      
