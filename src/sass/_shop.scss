@@ -1,0 +1,48 @@
+.shop{
+  min-height: 618px;
+  padding-top: 49px;
+  padding-bottom: 51px;
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 315px 770px;
+    column-gap: 85px;
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 30px;
+    color: #111111;
+    margin-bottom: 42px;
+  }
+  &__street{
+    font-weight: 400;
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 19px;
+  }
+  &__tel{
+    font-weight: 400;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 27px;
+  }
+  &__time{
+    font-weight: 400;
+    font-size: 18px;
+    color: #878787;
+    margin-bottom: 61px;
+  }
+  &__map{
+    width: 238px;
+    height: 54px;
+    border: 1px solid #EA4953;
+    outline: none;
+    >a{
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      text-align: center;
+      color: #EA4953;
+      text-decoration: none;
+    }
+  }
+}
